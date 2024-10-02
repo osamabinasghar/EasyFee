@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Features slider</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon.svg"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon.svg"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon.svg"/>
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- main template stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /*
+        * 10.testimonials styles
+        */
+        .testimonials-style-one {background-color: #F2FFF8; padding: 120px 0; position: relative;}
+        .testimonials-style-one .map-img {position: absolute; top: 50%; left: 10%; transform: translateY(-50%);
+            animation-name: mapMover; animation-duration: 5s; animation-timing-function: linear;
+            animation-iteration-count: infinite; transition: all .4s ease; transform-origin: center center; }
+        @keyframes mapMover {
+        0% {opacity: 0.05; transform: translateY(-50%) translateX(0); }
+        50% {opacity: 0.20;transform: translateY(-55%) translateX(-20px); }
+        100% {
+            opacity: 0.05;
+            transform: translateY(-50%) translateX(0); } }
+  .testimonials-style-one .block-title {
+    margin-bottom: 45px; }
+  .testimonials-style-one .single-testi-one p {
+    margin: 0;
+    color: #777B92;
+    font-size: 24px;
+    line-height: 46px; }
+  .testimonials-style-one .single-testi-one h3 {
+    color: #000;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0;
+    /* margin-top: 40px; } */
+    margin-bottom: 20px;
+  }
+  .testimonials-style-one .testi-carousel-one .owl-nav {
+    margin: 0;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background-color: #F2FFF8; }
+    .testimonials-style-one .testi-carousel-one .owl-nav [class*=owl-] {
+      margin: 0px 5px;
+      padding: 0;
+      background-color: transparent;
+      opacity: .3;
+      color: #000;
+      font-size: 32px;
+      transition: all .4s ease; }
+      .testimonials-style-one .testi-carousel-one .owl-nav [class*=owl-]:hover {
+        opacity: 1; }
+  .testimonials-style-one .bx-wrapper {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    margin-bottom: 0; }
+    .testimonials-style-one .bx-wrapper ul.slider {
+      padding: 0;
+      margin: 0; }
+  .testimonials-style-one .bx-wrapper .bx-controls-direction {
+    position: absolute;
+    bottom: -10px;
+    background-color: #F2FFF8;
+    right: 0; }
+  .testimonials-style-one .bx-wrapper .bx-controls-direction a {
+    text-indent: 0;
+    background-image: none;
+    font-size: 32px;
+    position: relative;
+    top: 0px;
+    opacity: .3;
+    color: #000;
+    transition: all .4s ease; }
+    .testimonials-style-one .bx-wrapper .bx-controls-direction a:hover {
+      opacity: 1; }
+  .testimonials-style-one .bx-wrapper .bx-prev {
+    left: 0px;
+    margin-right: 25px; }
+  .testimonials-style-one .bx-wrapper .bx-next {
+    right: 0px; }
+
+    #testimonials-slider-pager {
+    width: 391px;
+    height: 391px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(39, 49, 103, 0.15);
+    border-radius: 50%;
+    position: relative;
+    animation-name: tesiMove;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all .4s ease;
+    transform-origin: center center; }
+    @keyframes tesiMove {
+    0% {
+        transform: rotate(0deg); }
+    15% {
+        transform: rotate(2deg); }
+    33% {
+        transform: rotate(4deg); }
+    66% {
+        transform: rotate(2deg); }
+    100% {
+        transform: rotate(0deg); } }
+    #testimonials-slider-pager:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 174px;
+        height: 174px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1); }
+    #testimonials-slider-pager .testimonials-slider-pager-one .pager-item {
+        width: 71px;
+        height: 71px;
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute; }
+        /* 1st Fee Structure */
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item:nth-child(1) {
+        top: 55px;
+        left: 0px; }
+        /* 4th Dashboard */
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item:nth-child(2) {
+        top: 60px;
+        right: -10px; }
+        /* 9th Access*/
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item:nth-child(3) {
+        bottom: 130px;
+        left: -40px; }
+        /* 6th Split Payment*/
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item:nth-child(4) {
+        bottom: 10px;
+        right: 15px; }
+        /* 8th Timely Remainder */
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item:nth-child(5) {
+        bottom: 10px;
+        left: 7%; }
+        /* 2nd Payment Gateway */
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item:nth-child(6) {
+        top: -20px;
+        left: 25%;}
+        /* 5th Whatsapp */
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item:nth-child(7) {
+        bottom: 135px;
+        right: -30px; }
+        /* 7th Discounts*/
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item:nth-child(8) {
+        bottom: -40px;
+        left: 45%;}
+        /* 3rd Custom Charges*/
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item:nth-child(9) {
+        top: -15px;
+        left: 60%;}
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item > img {
+        width: 100%;
+        border-radius: 50%;
+        transition: all .4s ease; }
+        #testimonials-slider-pager .testimonials-slider-pager-one .pager-item.active img {
+        opacity: .75;
+        transform: scale(0.95); }
+        #testimonials-slider-pager .testimonials-slider-pager-two .pager-item {
+        width: 163px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        transition: all .4s ease; }
+        #testimonials-slider-pager .testimonials-slider-pager-two .pager-item.active {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.95); }
+        #testimonials-slider-pager .testimonials-slider-pager-two .pager-item > img {
+        width: 100%;
+        border-radius: 50%; }
+        </style>
+</head>
+<body>
+    <section class="testimonials-style-one" id="features">
+        <img src="images/map-1-1.png" alt="Awesome Image" class="map-img" />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex">
+                    <div class="my-auto">
+                        <!-- <img src="images/testi-1-1.png" alt="Awesome Image" class="testi-img" /> -->
+                        <div id="testimonials-slider-pager">
+                            <div class="testimonials-slider-pager-one">
+                                <!-- 1st -->
+                                <a href="#" class="pager-item active" data-slide-index="0"><img src="images/fee-structure.jpg" alt="Customized Fee Structure" /></a>
+                                <!-- 4th -->
+                                <a href="#" class="pager-item" data-slide-index="1"><img src="images/dashboard.jpg" alt="Dashboard" /></a>
+                                <a href="#" class="pager-item" data-slide-index="2"><img src="images/role-based-access.jpg" alt="Awesome Image" /></a>
+                                <!-- 6th -->
+                                <a href="#" class="pager-item" data-slide-index="3"><img src="images/split-payments.jpg" alt="Split Payment" /></a>
+                                <!-- 8th -->
+                                <a href="#" class="pager-item" data-slide-index="4"><img src="images/timely-remainders.jpg" alt="Awesome Image" /></a>
+                                <!-- 2nd -->
+                                <a href="#" class="pager-item" data-slide-index="5"><img src="images/payment-gateway.jpg" alt="Payment Gateway" /></a>
+                                <!-- 5th -->
+                                <a href="#" class="pager-item" data-slide-index="6"><img src="images/sms-whatsapp-integration.jpg" alt="SMS/Whatsapp Integration" /></a>
+                                <!-- 7th -->
+                                <a href="#" class="pager-item" data-slide-index="7"><img src="images/flexible-discounts-scholorships.jpg" alt="Features Discounts/Scholorships" /></a>
+                                <!-- 3rd -->
+                                <a href="#" class="pager-item" data-slide-index="8"><img src="images/customizable-charges.jpg" alt="Customizable Charges" /></a>
+                            </div><!-- /.testimonials-slider-pager-one -->
+                            <div class="testimonials-slider-pager-two">
+                                <!-- 1st -->
+                                <a href="#" class="pager-item active" data-slide-index="0"><img src="images/fee-structure.jpg" alt="Customize Fee Structure" /></a>
+                                <!-- 4th -->
+                                <a href="#" class="pager-item" data-slide-index="1"><img src="images/dashboard.jpg" alt="Dashboard" /></a>
+                                <a href="#" class="pager-item" data-slide-index="2"><img src="images/role-based-access.jpg" alt="Awesome Image" /></a>
+                                <!-- 6th -->
+                                <a href="#" class="pager-item" data-slide-index="3"><img src="images/split-payments.jpg" alt="Split Payment" /></a>
+                                <!-- 8th -->
+                                <a href="#" class="pager-item" data-slide-index="4"><img src="images/timely-remainders.jpg" alt="Awesome Image" /></a>
+                                <!-- 2nd -->
+                                <a href="#" class="pager-item" data-slide-index="5"><img src="images/payment-gateway.jpg" alt="Awesome Image" /></a>
+                                <!-- 5th -->
+                                <a href="#" class="pager-item" data-slide-index="6"><img src="images/sms-whatsapp-integration.jpg" alt="SMS/Whatsapp Integration" /></a>
+                                <!-- 7th -->
+                                <a href="#" class="pager-item" data-slide-index="7"><img src="images/flexible-discounts-scholorships.jpg" alt="Flexible Discounts/Scholorships" /></a>
+                                <!-- 3rd -->
+                                <a href="#" class="pager-item" data-slide-index="8"><img src="images/customizable-charges.jpg" alt="Customizable Charges" /></a>
+                            </div><!-- /.testimonials-slider-pager-two -->
+                        </div><!-- /#testimonials-slider-pager -->
+                    </div><!-- /.my-auto -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="block-title ">
+                        <img src="images/round-circle.png" alt="Awesome Image" class="wow rotateIn" data-wow-duration="1000ms" />
+                        <h2>Key Features of EasyFee</h2>
+                    </div><!-- /.block-title -->
+                    <ul class="slider testimonials-slider">
+                        <li class="slide-item">
+                            <div class="single-testi-one">
+                                <h3>Customized Fee Structure</h3>
+                                <p>Design school and class-specific fee structures, including both one-time and recurring fee categories.</p>
+                                <!-- <h3>Delila Rayam</h3> -->
+                            </div><!-- /.single-testi-one -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="single-testi-one">
+                                <h3>Dashboard</h3>
+                                <p>EasyFee's software includes comprehensive standard reports on fees paid, due, and discounts across classes, sections, and time periods. Users can also quickly build custom reports.</p>
+                            </div><!-- /.single-testi-one -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="single-testi-one">
+                                <h3>Role-Based Access</h3>
+                                <p>Ensure information integrity with role-based access and rights within the fee management system.</p>
+                            </div><!-- /.single-testi-one -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="single-testi-one">
+                                <h3>Split Payment</h3>
+                                <p>Offer flexible fee collection options, allowing payments to be received in multiple bank accounts as per the school's requirements.</p>
+                            </div><!-- /.single-testi-one -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="single-testi-one">
+                                <h3>Timely Remainders</h3>
+                                <p>Send and receive reminders about upcoming fee installments, missed payments, due dates, and more.</p>
+                            </div><!-- /.single-testi-one -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="single-testi-one">
+                                <h3>Integrate Payment Gateway</h3>
+                                <p>Enhance the parent experience by  integrating financing options and enabling online payments through the app.</p>
+                            </div><!-- /.single-testi-one -->
+                        </li>
+                        <li class="slide-item"></li>
+                            <div class="single-testi-one">
+                                <h3>Flexible Discounts/Scholorships</h3>
+                                <p>Tailor discounts to meet the specific needs of different sections and individual students.</p>
+                            </div><!-- /.single-testi-one -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="single-testi-one">
+                                <h3>Customizable Charges</h3>
+                                <p>Set up fines that cater to the requirements of various sections and individual students.</p>
+                            </div><!-- /.single-testi-one -->
+                        </li>
+                        <li class="slide-item">
+                            <div class="single-testi-one">
+                                <p>This is due to their excellent service, competitive pricing and customer support. It’s throughly refresing to get such a personal touch. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <h3>Adrianne Hagans</h3>
+                            </div><!-- /.single-testi-one -->
+                        </li>
+                    </ul>
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.testimonials-style-one -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
